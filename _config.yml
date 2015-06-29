@@ -1,2 +1,17 @@
 auto: true
 permalink: /:categories/:title
+
+# Setup
+title:        Eric M. Jalbert
+description:  'Personal Website'
+url:          https://ericmjalbert.github.io
+baseurl:      /
+
+author:
+name:         Eric M. Jalbert
+
+paginate:     5
+
+# Custom variable
+repo:         https://github.com/ericmjalbert/ericmjalbert.github.io
+resume:       ericmjalbertResume_Feb2015
