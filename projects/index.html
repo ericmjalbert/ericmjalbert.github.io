@@ -1,0 +1,23 @@
+---
+layout: default
+title: Projects
+---
+
+<section class="content">
+  <h2>Projects</h2>
+
+  <p>Check out my projects below</p>
+</section>
+
+<ul class="entries">
+  {% for project in site.tags.project %}
+
+  <li>
+    <a href="{{ project.url }}">
+      <img src="{{ project.image }}" />
+      <h3>{{ project.title }}</h3>
+    </a>
+  </li>
+
+  {% endfor %}
+</ul>
