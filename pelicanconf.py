@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = "Eric Jalbert"
 SITENAME = "Eric M. Jalbert"
-SITEURL = ""
+SITEURL = "http://ericmjalbert.github.io"
 
 PATH = "content"
 
@@ -47,7 +47,7 @@ DISPLAY_PAGES_ON_MENU = True
 TWITTER_USERNAME = "twitter-user-name"
 
 MENUITEMS = (("Blog", SITEURL),("About Me", SITEURL+"about-me") )
-SITEURL = "http://localhost:8000"
+#SITEURL = "http://localhost:8000"
 #####
 
 # Uncomment following line if you want document-relative URLs when developing
