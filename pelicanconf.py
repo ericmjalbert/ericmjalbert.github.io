@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = "Eric Jalbert"
 SITENAME = "Eric M. Jalbert"
-SITEURL = "http://ericmjalbert.github.io"
+SITEURL = "//ericmjalbert.netlify.com"
 
 PATH = "content"
 
@@ -27,9 +27,6 @@ LINKS = (
     ("You can modify those links in your config file", "#"),
 )
 
-# Social widget
-SOCIAL = (("You can add links in your config file", "#"), ("Another social link", "#"))
-
 DEFAULT_PAGINATION = 10
 
 
@@ -40,7 +37,7 @@ SIDEBAR_DIGEST = (
     "Working at the intersection of Engineering, Data Analytics, and Statistics."
 )
 
-FAVICON = "https://favicon.io/favicon-generator/?t=Ej&ff=Open+Sans&fs=100&fc=%23FFFFFF&b=rounded&bc=RGB%28103%2C84%2C+163%29"
+FAVICON = "extra/img/favicon.ico"
 
 DISPLAY_PAGES_ON_MENU = True
 
