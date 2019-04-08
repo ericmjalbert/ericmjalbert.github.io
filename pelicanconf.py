@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = "Eric Jalbert"
 SITENAME = "Eric M. Jalbert"
 SITEURL = "//ericmjalbert.netlify.com"
+SITEURL = "//localhost:8000"
 
 PATH = "content"
 
@@ -13,7 +14,6 @@ TIMEZONE = "America/Toronto"
 DEFAULT_LANG = "en"
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
@@ -37,14 +37,17 @@ SIDEBAR_DIGEST = (
     "Working at the intersection of Engineering, Data Analytics, and Statistics."
 )
 
-FAVICON = "extra/img/favicon.ico"
+STATIC_PATHS = ["img"]
+FAVICON = "img/favicon.ico"
 
 DISPLAY_PAGES_ON_MENU = True
 
-TWITTER_USERNAME = "twitter-user-name"
-
-MENUITEMS = (("Blog", SITEURL),("About Me", SITEURL+"about-me") )
-#SITEURL = "http://localhost:8000"
+MENUITEMS = (
+    ("Blog", SITEURL),
+    ("About Me", SITEURL + "/about-me"),
+    ("Projects", SITEURL + "/tag/project"),
+    ("Tags", SITEURL + "/tags"),
+)
 #####
 
 # Uncomment following line if you want document-relative URLs when developing

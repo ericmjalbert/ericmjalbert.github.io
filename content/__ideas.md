@@ -20,4 +20,8 @@ post ideas:
     * Do analysis on which "sections"/melodies occur most frequently in song
     * See if I can compare the metadata to determine which songs are the most popular indexed to the source game's popularity (ie from sales/rating/search results?)
 
-
+4. Wikipedia philosophy game
+    * Scrap wikipedia metadata and run throuhg 3 sceanrios for this:
+        * Manually doing it, report findings
+        * Browser automation, run 1000x times, report findings
+        * Scrap all(large amount?) wiki pages and generate a large connected graph (using network visualization bokeh/d3?)
