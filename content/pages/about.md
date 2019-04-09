@@ -3,7 +3,7 @@ Date: 2019-03-28 8:07
 Modified: 2019-03-28 8:07
 Category: Personal
 Tags: personal, about me, summary
-Slug: about-me
+Slug: about
 Authors: Eric Jalbert
 Status: published
 Summary: A page to summary who is Eric M. Jalbert.

@@ -43,7 +43,7 @@ DISPLAY_PAGES_ON_MENU = True
 
 MENUITEMS = (
     ("Blog", SITEURL),
-    ("About Me", SITEURL + "/about-me"),
+    ("About Me", SITEURL + "/pages/about.html"),
     ("Projects", SITEURL + "/tag/project"),
     ("Tags", SITEURL + "/tags"),
 )
