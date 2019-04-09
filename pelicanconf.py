@@ -47,6 +47,12 @@ MENUITEMS = (
     ("Projects", SITEURL + "/tag/project"),
     ("Tags", SITEURL + "/tags"),
 )
+
+SOCIAL = (
+    ("linkedin", "https://www.linkedin.com/in/ericmjalbert"),
+    ("github", "https://github.com/ericmjalbert"),
+)
+
 #####
 
 # Uncomment following line if you want document-relative URLs when developing
