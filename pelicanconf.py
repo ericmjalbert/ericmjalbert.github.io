@@ -53,6 +53,8 @@ SOCIAL = (
     ("github", "https://github.com/ericmjalbert"),
 )
 
+GOOGLE_ANALYTICS = "UA-138149926-1"
+
 #####
 
 # Uncomment following line if you want document-relative URLs when developing
