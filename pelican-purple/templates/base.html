@@ -60,6 +60,23 @@
       </ul>
     </nav>
 
+    <p class="social">
+        {% if SOCIAL %}
+            {% for name, link in SOCIAL %}
+                <a href="{{ link }}" target="_blank"><img
+                        src="{{ SITEURL }}/theme/images/icons/{{ name|lower }}.png"></a>
+            {% endfor %}
+        {% endif %}
+        {% if FEED_ALL_ATOM %}
+            <a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">
+                <img src="{{ SITEURL }}/theme/images/icons/rss.png"></a>
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+            <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">
+                <img src="{{ SITEURL }}/theme/images/icons/rss.png"></a>
+        {% endif %}
+    </p>
+
     <!--
     {% if categories %}
     <h2>Categories</h2>

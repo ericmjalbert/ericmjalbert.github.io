@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = "Eric Jalbert"
 SITENAME = "Eric M. Jalbert"
-SITEURL = "//ericmjalbert.netlify.com"
+SITEURL = "//ericmjalbert.com"
 
 PATH = "content"
 
@@ -47,6 +47,14 @@ MENUITEMS = (
     ("Projects", SITEURL + "/tag/project"),
     ("Tags", SITEURL + "/tags"),
 )
+
+SOCIAL = (
+    ("linkedin", "https://www.linkedin.com/in/ericmjalbert"),
+    ("github", "https://github.com/ericmjalbert"),
+)
+
+GOOGLE_ANALYTICS = "UA-138149926-1"
+
 #####
 
 # Uncomment following line if you want document-relative URLs when developing
