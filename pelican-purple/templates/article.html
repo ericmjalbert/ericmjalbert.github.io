@@ -10,6 +10,9 @@
 <meta property="og:title" content="{{ SITENAME }} ~ {{ article.title }}" />
 <meta property="og:description" content="{{ article.summary }}" />
 <meta property="og:image" content="" />
+
+<!-- Canonical Link -->
+<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}"/>
 {% endblock head %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
