@@ -8,6 +8,7 @@ html {
 h1 { text-transform: uppercase }
 h1, h2 { 
 	font-weight: normal; 
+  font-size: 2em;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -105,6 +106,11 @@ a:active { color:#7B68B7; text-decoration:none; }
 a:hover { text-decoration: underline; }
 
 /* Code */
+code {
+  background-color: #eee;
+  background: #eee;
+}
+
 .highlight pre {
   font-size: 14px;
   overflow: scroll;
