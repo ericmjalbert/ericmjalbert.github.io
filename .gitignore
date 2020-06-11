@@ -1,5 +1,4 @@
-_site/
-output/
+public/
 
 venv/
 __pycache__/
