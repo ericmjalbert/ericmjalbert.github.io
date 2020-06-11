@@ -1,3 +1,4 @@
 [submodule "themes/kiera"]
     path = themes/kiera
     url = https://github.com/avianto/hugo-kiera.git
+    branch = tags/20200223 
