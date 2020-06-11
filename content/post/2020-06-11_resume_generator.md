@@ -1,16 +1,17 @@
-Title: How to Automate Job Applications
-Date: 2020-06-10 4:02:10
-Modified: 2020-06-10 4:02:10
-Category: Python
-Tags: project, resume, automation
-Slug: automate-job-application
-Authors: Eric Jalbert
-Status: published
-Summary: A project to automate creating specialized resumes based on a given job description.
+---
+title: "How to Automate Job Applications"
+tags: [
+    "python",
+    "resume",
+    "nlp",
+]
+date: "2020-06-11"
+images: ["/2020-06-11_andrew-pons-6-RhsUzKO6g-unsplash.jpg"]
+---
 
 Creating job applications is a needed effort to progress in a professional career. When I do a large batch of job applications I find that I follow one of two main methodologies:
-1. Be non-optimal and use the same resume for all job applications; this is easy, but ineffective,
-2. Create a specialized job application for each job description that I apply to; this is hard, but tends to yield better results.
+1. Be non-optimal and use the same resume for all job applications. This is easy, but ineffective,
+2. Create a specialized job application for each job description that I apply to. This is hard, but tends to yield better results.
 
 If I'm actively searching for a new position I'll tend to do the latter option, but I've started to wonder if there is a better way to handle this. To this end I planned to automate the creation of specialized job applications.
 
@@ -115,7 +116,7 @@ That being said, it's pretty slick and easy to use, so I think I'll accept the l
 
 * TL;DR I used [best-resume-ever](https://github.com/salomonelli/best-resume-ever) to a moderate amount of success and generated a PDF resume. I still think my original resume looks better though....
 
-![Old and new resume comparison](/img/2019-03-25_resume_compare.png)
+![Old and new resume comparison](/2020-06-11_resume_compare.png)
 
 This phase is the bread and butter of this entire project.
 It represented the main pain point I had with my job application process and so I needed to have a way to generate a PDFs.
@@ -139,10 +140,10 @@ Together with the master resume I am now able to generate a resume; just a very 
 
 * TL;DR Took a simple approach and just grabbed every bullet point (`<li>` tag) that matches some basic conditions. Turns out this includes company benefits. 
 
-Now we are starting to get into the more unique part of the project; this is what separates it from a basic "Create-a-resume" to a "Automatically-customized-resume" project.
+Now we are starting to get into the more unique part of the project, this is what separates it from a basic "Create-a-resume" to a "Automatically-customized-resume" project.
 Because remember, the whole point of this is to have a subset of my master resume be used to create a specially tailored job application.
 To even be able to do that, I needed to be able to scrap the job requirements from an online job description.
-Because every single job description has the same idea of using bullet points to list out the requirements, I just need to grab the `<li>` tags using a simple tool to parse HTML; I chose [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/).
+Because every single job description has the same idea of using bullet points to list out the requirements, I just need to grab the `<li>` tags using a simple tool to parse HTML: I chose [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/).
 This is overall pretty easy besides a few simple edge cases:
 
 * List of links in the footer for site navigation; just remove points with `<a>`.
@@ -155,7 +156,7 @@ This is very appreciated as a potential candidate, but they are very clearly not
 A resume shouldn't specifically put a skill bullet point that says "I am excellent at ping pong" just because the company mentions they regularly have ping pong tournaments.
 Here is a striped down example of job application that does this:
 
-![Example job scraping problem](/img/2019-03-25_example_job_scraping.png)
+![Example job scraping problem](/2020-06-11_example_job_scraping.png)
 
 
 If I naively pull just the `<li>` points I'll be including all the "compensation" bullet points.
@@ -204,7 +205,8 @@ From the above HTML page, it would produce the following job description list:
 This is the "Data Science" part of the project.
 To get a specialized resume for a job application I needed a way to take a subset of my master resume.
 For this I used [Universal Sentence Encoder](https://tfhub.dev/google/universal-sentence-encoder/4) to convert the text into a vector and then for each highlight of my master resume I would use [cosine similarities](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) to assign a score for each highlight.
-This score would be the "closeness" that a resume highlight has with all the job description points; summing up these individual values give a score to the resume highlight.
+This score would be the "closeness" that a resume highlight has with all the job description points.
+Summing up these individual values give a score to the resume highlight.
 By getting the score for each resume highlight I just need to select the top 2-4 resume highlights per work-experience and now I have a resume that is tailored for the given job description.
 
 Let's run through a simple example to see this in action.
@@ -241,7 +243,7 @@ The "closeness" is calculated using [cosine similirities](https://scikit-learn.o
 A cosine score of 1 is the the most similar you can be, a cosine score of -1 is as opposite you can be. 
 The final aspect is to take the summation of each cosine score to get a single value for each resume highlight.
 
-Lets go back to our example; pulling in the resume highlights and job descriptions we get the real values of:
+Lets go back to our example, pulling in the resume highlights and job descriptions we get the real values of:
 
 ```shell
 RESUME_HIGHLIGHT: "I used my experience at planning projects and communicating 
@@ -321,10 +323,10 @@ These were things that I could improve in the future if they needed to be improv
 
 ## What Would I Do Next For This Project
 
-There are a lot of things that I think need to be worked on for this project; but at a high-level I think it'd be important to:
+There are a lot of things that I think need to be worked on for this project, but at a high-level I think it'd be important to:
 
 * Update the scoring algorithm for resume highlights. Not only the ML algorithm (ie. maybe universal sentence encoder isn't the best option), but I also might want to change the way I aggregate the scores together.
-    * To expand on that second point; the current setup of summing all the scores for each resume highlight is not good since it might favor resume highlights that do well on multiple bullet points instead of *killing it* on a single bullet point (ie. something that is a 90% match to only 1 bullet might not make the cut compared to others that do 20% match to 5 different bullets).
+    * To expand on that second point, the current setup of summing all the scores for each resume highlight is not good since it might favor resume highlights that do well on multiple bullet points instead of *killing it* on a single bullet point (ie. something that is a 90% match to only 1 bullet might not make the cut compared to others that do 20% match to 5 different bullets).
 * Add functionality to make a cover letter (using the same formatting as in the `best-resume-ever`). Not many companies look for cover letters, but I think they still add a nice level of polish to a job application.
 * Add a way to update my LinkedIn with the same content as the `master_resume.json` so that I only have to manage it in one place
 

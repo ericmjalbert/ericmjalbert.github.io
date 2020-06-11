@@ -1,0 +1,22 @@
+baseurl = "https://www.ericmjalbert.com/"
+title = "Eric M. Jalbert"
+copyright = "Copyright &copy; 2020 - Eric Jalbert"
+canonifyurls = true
+theme = "kiera"
+
+paginate = 5
+
+summaryLength = 30
+enableEmoji = true
+pygmentsCodeFences = true
+
+disqusShortname = "" #Disqus shortname
+googleAnalytics = "UA-138149926-1" #Google Analytics ID
+
+[author]
+    name = "Eric Jalbert"
+    github = "ericmjalbert"
+    linkedin = "ericmjalbert"
+
+[params]
+    tagline = "Working at the intersection of Engineering, Data Analytics, and Statistics."
