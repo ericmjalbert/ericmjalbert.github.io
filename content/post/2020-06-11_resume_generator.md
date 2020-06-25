@@ -4,6 +4,7 @@ tags: [
     "python",
     "resume",
     "nlp",
+    "project",
 ]
 date: "2020-06-11"
 images: ["/2020-06-11_andrew-pons-6-RhsUzKO6g-unsplash.jpg"]
@@ -17,7 +18,7 @@ If I'm actively searching for a new position I'll tend to do the latter option, 
 
 The final product can be viewed on github at [Resume Generator](https://github.com/ericmjalbert/resume-generator).
 
-I'll first give an overview of my work on the project. Following that will be my [self-reflections](#project-reflections) on the project as a whole.
+I'll first give an overview of my work on the project. Following that will be my [self-reflections]({{< relref "#project-reflections" >}}) on the project as a whole.
 
 -----
 
@@ -284,7 +285,7 @@ Because there are many components that are needed for the full resume to be gene
 
 ---
 
-## <a name="project-reflections"></a> Project Reflections
+# Project Reflections
 
 I want to take a step back to write down some of the self-reflections I had on this project.
 
