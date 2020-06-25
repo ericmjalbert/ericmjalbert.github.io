@@ -1,4 +1,4 @@
 [submodule "themes/kiera"]
     path = themes/kiera
-    url = https://github.com/avianto/hugo-kiera.git
+    url = https://github.com/ericmjalbert/hugo-kiera.git
     branch = master
